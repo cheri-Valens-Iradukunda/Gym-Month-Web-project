@@ -8,10 +8,12 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-green-500: oklch(72.3% 0.219 149.579);
-    --color-blue-800: oklch(42.4% 0.199 265.638);
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-yellow-300: oklch(90.5% 0.182 98.111);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --spacing: 0.25rem;
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -165,8 +167,53 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .table {
     display: table;
+  }
+  .h-54 {
+    height: calc(var(--spacing) * 54);
+  }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
+  .h-65 {
+    height: calc(var(--spacing) * 65);
+  }
+  .h-\[150px\] {
+    height: 150px;
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
+  .w-65 {
+    width: calc(var(--spacing) * 65);
+  }
+  .w-66 {
+    width: calc(var(--spacing) * 66);
+  }
+  .w-\[75\%\] {
+    width: 75%;
+  }
+  .w-\[200px\] {
+    width: 200px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -178,8 +225,31 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .text-amber-300 {
-    color: var(--color-amber-300);
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
+  .bg-yellow-300 {
+    background-color: var(--color-yellow-300);
+  }
+  .bg-yellow-400 {
+    background-color: var(--color-yellow-400);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .underline {
     text-decoration-line: underline;
@@ -188,6 +258,61 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .\[clip-path\:polygon\(1\%_16\%\,66\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(1% 16%,66% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(5\%_11\%\,69\%_7\%\,100\%_36\%\,86\%_66\%\,24\%_59\%\,3\%_36\%\)\] {
+    clip-path: polygon(5% 11%,69% 7%,100% 36%,86% 66%,24% 59%,3% 36%);
+  }
+  .\[clip-path\:polygon\(5\%_11\%\,_69\%_7\%\,_100\%_36\%\,_86\%_66\%\,_24\%_59\%_3\%_36\%\)\] {
+    clip-path: polygon(5% 11%, 69% 7%, 100% 36%, 86% 66%, 24% 59% 3% 36%);
+  }
+  .\[clip-path\:polygon\(13\%_11\%\,67\%_8\%\,90\%_34\%\,80\%_63\%\,31\%_56\%\,10\%_38\%\)\] {
+    clip-path: polygon(13% 11%,67% 8%,90% 34%,80% 63%,31% 56%,10% 38%);
+  }
+  .\[clip-path\:polygon\(14\%_16\%\,66\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(14% 16%,66% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(15\%_20\%\,70\%_10\%\,90\%_40\%\,80\%_80\%\,25\%_70\%\,10\%_45\%\)\] {
+    clip-path: polygon(15% 20%,70% 10%,90% 40%,80% 80%,25% 70%,10% 45%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,7\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,7% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,66\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,66% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,70\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,70% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,75\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,75% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_16\%\,79\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 16%,79% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(17\%_20\%\,66\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(17% 20%,66% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(20\%_16\%\,66\%_10\%\,95\%_36\%\,80\%_61\%\,33\%_57\%\,14\%_35\%\)\] {
+    clip-path: polygon(20% 16%,66% 10%,95% 36%,80% 61%,33% 57%,14% 35%);
+  }
+  .\[clip-path\:polygon\(25\%_5\%\,85\%_10\%\,98\%_55\%\,80\%_95\%\,10\%_90\%\,2\%_40\%\)\] {
+    clip-path: polygon(25% 5%,85% 10%,98% 55%,80% 95%,10% 90%,2% 40%);
+  }
+  .\[clip-path\:polygon\(25\%_5\%\,_85\%_10\%\,_98\%_55\%\,_80\%_95\%\,_10\%_90\%\,_2\%_40\%\)\] {
+    clip-path: polygon(25% 5%, 85% 10%, 98% 55%, 80% 95%, 10% 90%, 2% 40%);
+  }
+}
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
 }
 @property --tw-border-style {
   syntax: "*";
