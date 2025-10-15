@@ -202,8 +202,29 @@
   .h-84 {
     height: calc(var(--spacing) * 84);
   }
+  .h-94 {
+    height: calc(var(--spacing) * 94);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
+  .h-120 {
+    height: calc(var(--spacing) * 120);
+  }
   .w-84 {
     width: calc(var(--spacing) * 84);
+  }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
+  .w-150 {
+    width: calc(var(--spacing) * 150);
+  }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
   }
   .w-full {
     width: 100%;
