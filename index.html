@@ -17,9 +17,12 @@
 
     window.onload = () => {
         loadComponents('home_upper_part', 'src/sections/home_upper_part.html');
+        loadComponents('home_upper', 'src/sections/home_upper.html');
     }
 </script>
-<body class="h-[300vh]">
-    <div id="home_upper_part"></div>
+<body class="h-[500vh] overflow-x-hidden">
+    <div class="h-[150vh] relative bg-black">
+        <div id="home_upper" ></div>
+    </div>
 </body>
 </html>
