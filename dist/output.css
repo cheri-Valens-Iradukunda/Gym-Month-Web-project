@@ -15,6 +15,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -303,6 +305,11 @@
   .\[clip-path\:polygon\(6\%_33\%\,80\%_31\%\,100\%_60\%\,79\%_93\%\,23\%_91\%\,0_71\%\)\] {
     clip-path: polygon(6% 33%,80% 31%,100% 60%,79% 93%,23% 91%,0 71%);
   }
+  .md\:h-16 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 16);
+    }
+  }
   .md\:h-90 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 90);
@@ -388,6 +395,11 @@
       max-width: 22vw;
     }
   }
+  .md\:max-w-\[25vw\] {
+    @media (width >= 48rem) {
+      max-width: 25vw;
+    }
+  }
   .md\:space-y-10 {
     @media (width >= 48rem) {
       :where(& > :not(:last-child)) {
@@ -460,6 +472,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
 }
