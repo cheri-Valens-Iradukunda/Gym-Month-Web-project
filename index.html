@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,42 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
     <title>Website project template</title>
-</head>
-
-
+ </head>
 <body class="overflow-hidden">
     <div id="navigation"></div>
     <div class="h-[150vh] pt-40 relative bg-blac">
         <div id="home_upper" ></div>
     </div>
-<script>
-    const loadComponents = (id, url,callback) =>  {
-        fetch(url)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById(id).innerHTML = html;
-            if (callback) callback(); // Run callback after load
-        });
-    };
+    <script defer src="src/js/nav.js"></script>
+    <script>
+        const loadComponents = (id, url) =>  {
+            return fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById(id).innerHTML = html;
+            });
+        }
 
-    window.onload = () => {
-        loadComponents('home_upper_part', 'src/sections/home_upper_part.html');
-        loadComponents('home_upper', 'src/sections/home_upper.html');
-        loadComponents('navigation', 'src/sections/navigation.html', () => {
-            let container = document.getElementById("click");
-            let close = document.getElementById("close")
-            // console.log(container)
-            console.log(close)
-            close.addEventListener("click", ()=>{
-                console.log("yes")
-            })
+        window.onload = async () => {
+            // load navbar first so scripts can attach
+            await loadComponents('navigation', 'src/sections/navigation.html');
+            // init nav handlers that expect elements inside the injected navbar
+            if (window.initNav) window.initNav();
 
-        });
-    };
-    function handleClick(){
-        console.log("clicked");
-    }
-    
-</script>
+            // load the rest (can be async)
+            loadComponents('home_upper_part', 'src/sections/home_upper_part.html');
+            loadComponents('home_upper', 'src/sections/home_upper.html');
+        }
+    </script>
 </body>
 </html>
