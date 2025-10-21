@@ -29,7 +29,7 @@
                 lg:w-[35.09375rem] lg:h-[30.125rem]
                 md:w-[24.09375rem] md:h-[22.125rem]
                 sm:w-[19.09375rem] sm:h-[20.125rem]
-                max-sm:w-[12.09375rem] max-sm:h-[10.125rem]
+                max-sm:w-[14.09375rem] max-sm:h-[12.125rem]
                 "></div>
         </div>
         <div class="absolute mt-36 max-sm:mt-20  h-[130vh]">
@@ -39,17 +39,17 @@
                  lg:w-[29.75rem] lg:h-[30.75rem]
                  md:w-[24.75rem] md:h-[25.75rem]
                  sm:w-[19.75rem] sm:h-[20.75rem]
-                 max-sm:w-[10.75rem] max-sm:h-[11.75rem]
+                 max-sm:w-[13.75rem] max-sm:h-[13.75rem]
                  "></div>
         </div>
-        <div class="absolute mt-58 max-sm:mt-45 h-[110vh] right-0 max-sm:left-[56%]">
+        <div class="absolute mt-58 max-sm:mt-35 h-[110vh] right-0 max-sm:left-[60%]">
             <div class="sticky top-0 right-0
             [clip-path:polygon(76%_0,_100%_26%,_100%_100%,_68%_100%,_36%_83%,_25%_46%,_40%_13%)] 
             w-[30.375rem] h-[34.53125rem] bg-green-800
             lg:w-[30.375rem] lg:h-[34.53125rem]
             md:w-[25.375rem] md:h-[29.53125rem]
             sm:w-[20.375rem] sm:h-[24.53125rem]
-            max-sm:w-[10.375rem] max-sm:h-[14.53125rem]
+            max-sm:w-[12.375rem] max-sm:h-[16.53125rem]
             "></div>
         </div>
         
@@ -61,17 +61,18 @@
             md:w-[28rem] md:h-[27.1875rem]
             sm:w-[23rem] sm:h-[23.1875rem]
             
-            max-sm:w-[13rem] max-sm:h-[13.18rem]
+            max-sm:w-[15rem] max-sm:h-[15.18rem]
             "></div>
         </div>
-        
-        
-        <div class="absolute mt-75 lg:mt-75 z-5 text-white font-semibold text-2xl w-[20rem] mx-[40%] md:mt-30 h-[125vh]">
-            We help you set
-            focus and gain
-            impact. By adding
-            to the conversation,
-            not to the noise.
+        <div class="absolute mt-75 sm:mt-75 max-sm:mt-40 lg:mt-75 w-screen z-5  mx-auto md:mt-30 h-[125vh]">
+
+            <h2 class="max-sm:w-[50%] sm:w-[40%] mx-auto text-white font-semibold sm:text-4xl max-sm:text-md ">
+                We help you set
+                focus and gain
+                impact. By adding
+                to the conversation,
+                not to the noise.
+            </h2>
         </div>
         
         <div class="absolute flex justify-between w-screen p-5 top-0 font-semibold text-md">
@@ -79,13 +80,31 @@
                 <p>DE</p>
                 <p>EN</p>
             </div>
-            <h2 class="font-bold text-4xl mt-5">Baumeister</h2>
-            <ul class="capitalize">
+            <h2 class="font-bold text-4xl mt-5 max-sm:mt-2 sm:mt-5">Baumeister</h2>
+            <ul class="capitalize max-sm:hidden sm:block">
                 <li><a href="#">about</a></li>
                 <li><a href="#">services</a></li>
                 <li><a href="#">references</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
+            <div class=" max-sm:block sm:hidden">
+
+                <div class="[clip-path:polygon(25%_3%,_75%_0,_100%_23%,_81%_44%,_37%_41%,_19%_25%)] 
+                            w-24 h-24 bg-black flex justify-center"
+                    onclick="document.getElementById('dropdown').classList.toggle('max-sm:block')"
+                >
+                    <h1 class="text-white text-3xl font-bold">X</h1>
+                </div>
+                <ul id="dropdown" class="capitalize max-sm:block hidden sm:hidden text-green-700 text-2xl absolute right-5 top-20">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">references</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+
+
         </div>
         <!-- <div class="w-screen h-[20vh] bg-amber-700 absolute b-0"></div> -->
 <!-- </div> -->
+
