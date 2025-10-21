@@ -12,11 +12,8 @@
     <title>Website project template</title>
  </head>
 <body class="overflow-x-hidden ">
-    <div class="fixed w-screen z-5" id="navigation"></div>
-    <div class="h-[150vh] pt-40 -z-1 relative bg-blac">
-        <div id="home_upper" ></div>
-    </div>
-    <div id="home_bottom_part" class="z-1"></div>
+    <div id="nav" class="fixed w-screen"></div>
+    <div id="privacy"></div>
     <script defer src="src/js/nav.js"></script>
     <script>
         const loadComponents = (id, url) =>  {
@@ -28,16 +25,8 @@
         }
 
         window.onload = async () => {
-            // load navbar first so scripts can attach
-            await loadComponents('navigation', 'src/sections/navigation.html');
-            // init nav handlers that expect elements inside the injected navbar
-            if (window.initNav) window.initNav();
-
-            // load the rest (can be async)
-            loadComponents('home_upper_part', 'src/sections/home_upper_part.html');
-            loadComponents('home_upper', 'src/sections/home_upper.html');
-            loadComponents('imprint', 'src/sections/imprint.html');
-        loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
+            await loadComponents('privacy', '../sections/privacy_part.html');
+            await loadComponents('nav', '../sections/navigation.html');
         }
     </script>
 </body>
