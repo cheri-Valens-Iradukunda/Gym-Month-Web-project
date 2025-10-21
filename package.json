@@ -1,7 +1,6 @@
 {
-  "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+  "scripts":{
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.14",
