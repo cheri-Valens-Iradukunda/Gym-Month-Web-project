@@ -3,4 +3,14 @@
 @theme{
     --breakpoint-xs: 300px;
     --breakpoint-lxs: 400px;
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style:normal;
+  line-height: 1.2;
+}
+
+.formatted{
+  font-family: "Outfit", sans-serif;
 }
