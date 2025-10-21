@@ -14,7 +14,7 @@ function initNav() {
     const close = document.getElementById('close-icon');
     const menuShape = document.getElementById('menu-shape');
     menuShape.addEventListener('click', () => {
-        menu.classList.toggle('max-xl:hidden');
+        menu.classList.toggle('max-lg:hidden');
         open.classList.toggle('hidden');
         close.classList.toggle('hidden');
     });
