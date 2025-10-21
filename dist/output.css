@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-amber-400: oklch(82.8% 0.189 84.429);
@@ -234,12 +233,6 @@
   .z-5 {
     z-index: 5;
   }
-  .z-10 {
-    z-index: 10;
-  }
-  .z-15 {
-    z-index: 15;
-  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -254,9 +247,6 @@
   }
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
-  }
-  .me-0 {
-    margin-inline-end: calc(var(--spacing) * 0);
   }
   .-mt-2 {
     margin-top: calc(var(--spacing) * -2);
@@ -350,9 +340,6 @@
   }
   .hidden {
     display: none;
-  }
-  .table {
-    display: table;
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
@@ -465,17 +452,11 @@
   .max-w-\[95\%\] {
     max-width: 95%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .-rotate-2 {
     rotate: calc(2deg * -1);
   }
   .-rotate-5 {
     rotate: calc(5deg * -1);
-  }
-  .resize {
-    resize: both;
   }
   .list-inside {
     list-style-position: inside;
@@ -503,9 +484,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
   }
   .space-y-0 {
     :where(& > :not(:last-child)) {
@@ -558,10 +536,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-\[rgba\(255\,232\,0\,1\)\] {
     background-color: rgba(255,232,0,1);
   }
@@ -585,9 +559,6 @@
   }
   .bg-pink-300 {
     background-color: var(--color-pink-300);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -699,10 +670,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -1683,11 +1650,6 @@
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -1695,11 +1657,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -1713,10 +1670,8 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
-      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }
