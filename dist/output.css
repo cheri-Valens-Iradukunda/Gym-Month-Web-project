@@ -235,6 +235,27 @@
   .z-100 {
     z-index: 100;
   }
+  .container {
+    width: 100%;
+    @media (width >= 300px) {
+      max-width: 300px;
+    }
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .mx-50 {
     margin-inline: calc(var(--spacing) * 50);
   }
@@ -306,6 +327,9 @@
   }
   .ml-\[40vw\] {
     margin-left: 40vw;
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
