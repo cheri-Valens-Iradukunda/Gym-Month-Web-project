@@ -13,9 +13,10 @@
  </head>
 <body class="overflow-x-hidden ">
     <div class="fixed w-screen z-5" id="navigation"></div>
-    <div class="h-[150vh] pt-40 relative bg-blac">
+    <div class="h-[150vh] pt-40 -z-1 relative bg-blac">
         <div id="home_upper" ></div>
     </div>
+    <div id="home_bottom_part" class="z-1"></div>
     <script defer src="src/js/nav.js"></script>
     <script>
         const loadComponents = (id, url) =>  {
@@ -36,6 +37,7 @@
             loadComponents('home_upper_part', 'src/sections/home_upper_part.html');
             loadComponents('home_upper', 'src/sections/home_upper.html');
             loadComponents('imprint', 'src/sections/imprint.html');
+        loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
            loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
         }
     </script>
