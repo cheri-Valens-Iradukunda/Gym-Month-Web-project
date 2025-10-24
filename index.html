@@ -1,40 +1,42 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href= "https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>Website project template</title>
-</head>
-<script>
-    const loadComponents = (id, url) => {
-        fetch(url)
+ </head>
+<body class="overflow-x-hidden ">
+    <div class="fixed w-screen z-5" id="navigation"></div>
+    <div class="h-[150vh] pt-40 -z-1 relative">
+        <div id="home_upper" ></div>
+    </div>
+    <div id="home_bottom_part" class="z-1"></div>
+    <script defer src="src/js/nav.js"></script>
+    <script>
+        const loadComponents = (id, url) =>  {
+            return fetch(url)
             .then((response) => response.text())
             .then((html) => {
                 document.getElementById(id).innerHTML = html;
             });
-    }
+        }
 
-    window.onload = () => {
-        loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
-        // loadComponents('privacy_part', 'src/sections/privacy_part.html')
-        // loadComponents('contact', 'src/sections/contact.html');
-        // loadComponents('footer', 'src/sections/footer.html');
-    }
-</script>
+        window.onload = async () => {
+            await loadComponents('navigation', 'src/sections/navigation.html');
+            if (window.initNav) window.initNav();
 
-<body>
-
-    <div id="home_bottom_part">
-    </div>
-    <!-- <div id="privacy_part"></div> -->
-    <!-- <div id="hero"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>  -->
+            loadComponents('home_upper', 'src/sections/home_upper.html');
+            loadComponents('imprint', 'src/sections/imprint.html');
+            loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
+           loadComponents('home_bottom_part', 'src/sections/home_bottom_part.html');
+        }
+    </script>
 </body>
 
 </html>
